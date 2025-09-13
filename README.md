@@ -1,14 +1,19 @@
 # Tmux
 
-This tmux configuration provides a customized terminal multiplexer setup with vim-like keybindings, session management, and theming options.
+Customized terminal multiplexer setup with vim-like keybindings, session management, and theming options.
 
-## System Dependencies
+## Plugins
 
-- **tmux** - Terminal multiplexer (core dependency)
-- **zsh** - Shell used for sessionizer script execution
-- **neovim/vim** - Optional, For vim-aware pane navigation and integration features inside neovim itself
+- None
 
-## Notable Configurations
+## Integrations
+
+- **tmux.nvim**: Neovim plugin for tmux integration
+- **Sessionizer**: Custom script for project-based session management
+- **Neovim**: Vim-aware pane navigation
+- **Zsh**: Shell integration for session management
+
+## Configuration
 
 ### Keybindings
 - **Prefix**: `Ctrl+Space` (instead of default `Ctrl+b`)
@@ -32,14 +37,20 @@ Two theme options available:
 
 To switch themes, edit `custom/theme.conf` to source the desired theme file.
 
+## System Dependencies
+
+### Required
+
+- **tmux** - Terminal multiplexer
+- **zsh** - Shell for sessionizer script execution
+
+### Optional
+
+- **neovim/vim** - For vim-aware pane navigation
+- **fzf** - For fuzzy project selection in sessionizer
+
 ## Installation
 
 1. Ensure all system dependencies are installed
 2. Clone or copy this configuration to `~/.config/tmux/`
 3. Source the main config: `tmux source ~/.config/tmux/tmux.conf`
-
-## Integration
-
-This configuration includes integration features for:
-- **tmux.nvim**: Neovim plugin for tmux integration
-- **Sessionizer**: Custom script for project-based session management (requires `dev` command in PATH)
